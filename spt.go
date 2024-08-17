@@ -6,7 +6,7 @@ import "os"
 func FetchEnv(envVar string, defaultValue string) string {
 	envValue, ok := os.LookupEnv(envVar)
 
-	if ok {
+	if !ok {
 		envValue = defaultValue
 	}
 
